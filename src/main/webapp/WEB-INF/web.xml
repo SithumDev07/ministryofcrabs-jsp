@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>FoodController</servlet-name>
+    <display-name>FoodController</display-name>
+    <description>Get all foods</description>
+    <servlet-class>lk.ac.kln.controller.FoodController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoodController</servlet-name>
+    <url-pattern>/crabs</url-pattern>
+  </servlet-mapping>
 </web-app>

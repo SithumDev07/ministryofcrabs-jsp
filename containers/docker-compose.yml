@@ -1,0 +1,42 @@
+version: '.3.3'
+services:
+  databse:
+    image: mysql:5.7
+    volumes:
+      - db_data-1:/var/lib/mysql
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: javalounge_cafe
+      MYSQL_USER: javalounge_admin
+      MYSQL_PASSWORD: javalounge_master_password
+    ports:
+      - '3306:3306'
+  phpmyadmin:
+    depends_on:
+      - databse
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8081:80'
+    environment:
+      PMA_HOST: databse
+      MYSQL_ROOT_PASSWORD: root
+  web:
+    depends_on:
+      - databse
+    image: tomcat
+    volumes:
+      - ./tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - ./target/ministryofcrabs.war:/usr/local/tomcat/webapps/ministryofcrabs.war
+    ports:
+      - '8082:8080'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: javalounge
+      MYSQL_USER: javalounge_admin
+      MYSQL_PASSWORD: javalounge_master_password
+    entrypoint: |
+      bash -c 'cp -a webapps.dist/manager webapps/; exec catalina.sh run'
+volumes:
+  db_data-1:
+    name: db_data-1

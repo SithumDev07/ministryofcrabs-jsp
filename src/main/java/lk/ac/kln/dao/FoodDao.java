@@ -1,2 +1,11 @@
-package main.java.lk.ac.kln.dao;public class FoodDao {
+package lk.ac.kln.dao;
+
+import lk.ac.kln.model.Food;
+
+import java.util.Optional;
+
+public interface FoodDao {
+
+    Optional<Food> getAllCrabs();
+
 }
