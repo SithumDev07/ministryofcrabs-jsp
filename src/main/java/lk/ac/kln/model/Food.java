@@ -9,12 +9,23 @@ public class Food {
 
     private double price;
 
-    public Food(int id, String name, String description, String size, double price) {
+    private String image;
+
+    public Food(int id, String name, String description, String size, double price, String image) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.size = size;
         this.price = price;
+        this.image = image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Food() {}
@@ -67,6 +78,7 @@ public class Food {
                 ", description='" + description + '\'' +
                 ", size='" + size + '\'' +
                 ", price=" + price +
+                ", image='" + image + '\'' +
                 '}';
     }
 }

@@ -2,13 +2,15 @@ package lk.ac.kln.dao;
 
 import lk.ac.kln.model.Food;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class FoodDaoImpl implements FoodDao {
+
+    private static final String SELECT_ALL_USERS = "SELECT * from food";
+    private static final String INSERT_CRABS = "INSERT INTO food(name, description, size, price, image) VALUES (?, ?, ?, ?, ?)";
 
     public Connection getConnection() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
@@ -17,26 +19,34 @@ public class FoodDaoImpl implements FoodDao {
     }
 
     @Override
-    public Optional<Food> getAllCrabs() {
+    public List<Food> getAllCrabs() {
 
-        Food food = new Food();
+        List<Food> foods = new ArrayList<>();
 
         try {
             Connection connection = getConnection();
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM food");
-            if(resultSet.next()) {
+            PreparedStatement statement = connection.prepareStatement(SELECT_ALL_USERS);
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()) {
+                Food food = new Food();
                 food.setId(resultSet.getInt("id"));
                 food.setName(resultSet.getString("name"));
                 food.setDescription(resultSet.getString("description"));
                 food.setSize(resultSet.getString("size"));
                 food.setPrice(resultSet.getDouble("price"));
+                food.setImage(resultSet.getString("image"));
+                foods.add(food);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return Optional.of(food);
+        return foods;
+    }
+
+    @Override
+    public void insertFood(Food food) {
+
     }
 
 }
