@@ -68,7 +68,7 @@
                 <img src="https://www.ministryofcrab.com/colombo/wp-content/themes/moctheme/images/owner.png" class="h-full w-full object-contain" />
             </div>
         </div>
-        <form action="crabs" method="get">
+        <form class="w-full flex justify-center" action="crabs" method="get">
             <button type="submit" class="px-7 py-4 rounded-full bg-amber-400 text-gray-700 text-base">See Menu</button>
         </form>
     </div>

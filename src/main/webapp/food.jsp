@@ -37,9 +37,9 @@
 <div class="w-full min-h-screen bg-black-pro">
     <nav class="w-full flex items-center justify-between px-10 py-3 sticky top-0 z-40 bg-black-pro">
         <form method="get" action="/">
-            <div class="logo">
+            <button type="submit" class="logo">
                 <img class="h-16 w-auto" src="https://www.ministryofcrab.com/colombo/wp-content/themes/moctheme/images/logo-1.png" />
-            </div>
+            </button>
         </form>
         <form action="crabs" method="get">
             <button type="submit" class="px-7 py-4 rounded-full bg-amber-400 text-gray-700 text-base">See Menu</button>
@@ -53,45 +53,15 @@
         <div class="w-full grid grid-cols-3 gap-5 px-10">
             <div class="relative w-full h-[60vh] crab-card overflow-hidden group">
                 <img class="w-full h-full object-cover" src="https://www.ministryofcrab.com/colombo/wp-content/uploads/2019/03/Pepper-Crab-3.jpg" />
-                <div class="bg-amber-400 absolute transform left-0 right-0 bottom-0 top-0 translate-y-full group-hover:translate-y-0 text-gray-700 p-4 transition-all duration-300">
+                <div class="bg-amber-400 flex flex-col absolute transform left-0 right-0 bottom-0 top-0 translate-y-full group-hover:translate-y-0 text-gray-900 p-4 transition-all duration-300">
                     <h3 class="mb-2 text-3xl"><% out.println(food.getName()); %></h3>
-                    <p class="text-base">
+                    <p class="text-base flex-1">
                         <% out.println(food.getDescription()); %>
                     </p>
                     <div class="flex items-center justify-between">
                         <p class="text-xl mt-3 mr-1"><span class="text-5xl">$</span><% out.println(food.getPrice()); %></p>
-                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-[#191919]/40">
-                            <p><% out.println(food.getSize()); %></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="relative w-full h-[60vh] crab-card overflow-hidden group">
-                <img class="w-full h-full object-cover" src="https://www.ministryofcrab.com/colombo/wp-content/uploads/2019/03/Pepper-Crab-3.jpg" />
-                <div class="bg-amber-400 absolute transform left-0 right-0 bottom-0 top-0 translate-y-full group-hover:translate-y-0 text-gray-700 p-4 transition-all duration-300">
-                    <h3 class="mb-2 text-3xl"><% out.println(food.getName()); %></h3>
-                    <p class="text-base">
-                        <% out.println(food.getDescription()); %>
-                    </p>
-                    <div class="flex items-center justify-between">
-                        <p class="text-xl mt-3 mr-1"><span class="text-5xl">$</span><% out.println(food.getPrice()); %></p>
-                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-[#191919]/40">
-                            <p><% out.println(food.getSize()); %></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="relative w-full h-[60vh] crab-card overflow-hidden group">
-                <img class="w-full h-full object-cover" src="https://www.ministryofcrab.com/colombo/wp-content/uploads/2019/03/Pepper-Crab-3.jpg" />
-                <div class="bg-amber-400 absolute transform left-0 right-0 bottom-0 top-0 translate-y-full group-hover:translate-y-0 text-gray-700 p-4 transition-all duration-300">
-                    <h3 class="mb-2 text-3xl"><% out.println(food.getName()); %></h3>
-                    <p class="text-base">
-                        <% out.println(food.getDescription()); %>
-                    </p>
-                    <div class="flex items-center justify-between">
-                        <p class="text-xl mt-3 mr-1"><span class="text-5xl">$</span><% out.println(food.getPrice()); %></p>
-                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-[#191919]/40">
-                            <p><% out.println(food.getSize()); %></p>
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-[#191919]/20">
+                            <p class="text-xl"><% out.println(food.getSize()); %></p>
                         </div>
                     </div>
                 </div>
