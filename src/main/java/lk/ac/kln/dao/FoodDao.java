@@ -11,4 +11,6 @@ public interface FoodDao {
 
     void insertFood(final Food food);
 
+    Boolean deleteFood(final int id);
+
 }

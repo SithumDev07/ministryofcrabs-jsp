@@ -3,34 +3,4 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
   <display-name>Archetype Created Web Application</display-name>
-<!--  <servlet>-->
-<!--    <servlet-name>FoodController</servlet-name>-->
-<!--    <display-name>FoodController</display-name>-->
-<!--    <description>Get all foods</description>-->
-<!--    <servlet-class>lk.ac.kln.controller.FoodController</servlet-class>-->
-<!--  </servlet>-->
-<!--  <servlet>-->
-<!--    <servlet-name>HomeController</servlet-name>-->
-<!--    <display-name>HomeController</display-name>-->
-<!--    <description>View the home page</description>-->
-<!--    <servlet-class>lk.ac.kln.controller.HomeController</servlet-class>-->
-<!--  </servlet>-->
-<!--  <servlet>-->
-<!--    <servlet-name>CrabViewController</servlet-name>-->
-<!--    <display-name>CrabViewController</display-name>-->
-<!--    <description>Display One Crab Item</description>-->
-<!--    <servlet-class>lk.ac.kln.controller.CrabViewController</servlet-class>-->
-<!--  </servlet>-->
-<!--  <servlet-mapping>-->
-<!--    <servlet-name>FoodController</servlet-name>-->
-<!--    <url-pattern>/crabs</url-pattern>-->
-<!--  </servlet-mapping>-->
-<!--  <servlet-mapping>-->
-<!--    <servlet-name>CrabViewController</servlet-name>-->
-<!--    <url-pattern>/crabs/crab</url-pattern>-->
-<!--  </servlet-mapping>-->
-<!--  <servlet-mapping>-->
-<!--    <servlet-name>HomeController</servlet-name>-->
-<!--    <url-pattern>/</url-pattern>-->
-<!--  </servlet-mapping>-->
 </web-app>

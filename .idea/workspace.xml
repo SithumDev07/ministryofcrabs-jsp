@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46792e89-9cc3-4439-afdf-8ecc6c38932a" name="Changes" comment="Animations Added Food View">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ac/kln/controller/HomeController.java" afterDir="false" />
+    <list default="true" id="46792e89-9cc3-4439-afdf-8ecc6c38932a" name="Changes" comment="Products Page Completed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ac/kln/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ac/kln/controller/CrabDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/foods-admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/introduce-crab.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/containers/mysql-dump/ministryofcrabs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/containers/mysql-dump/ministryofcrabs.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ac/kln/controller/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ac/kln/controller/FoodController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ac/kln/dao/FoodDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ac/kln/dao/FoodDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ac/kln/dao/FoodDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ac/kln/dao/FoodDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ac/kln/model/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ac/kln/model/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/food.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/food.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
       </list>
@@ -55,7 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/sithum/Development/Maven Projects/ministryofcrabs/src/main/webapp/WEB-INF/lib",
+    "last_opened_file_path": "/home/sithum/Development/Maven Projects/ministryofcrabs/src/main/webapp/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,6 +74,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/admin" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/containers/target" />
@@ -86,7 +90,7 @@
       <updated>1662797831021</updated>
       <workItem from="1662797832417" duration="9870000" />
       <workItem from="1662823120587" duration="13024000" />
-      <workItem from="1662869544134" duration="14789000" />
+      <workItem from="1662869544134" duration="26851000" />
     </task>
     <task id="LOCAL-00001" summary="Home Page Added">
       <created>1662842366129</created>
@@ -102,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662870841306</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Products Page Completed">
+      <created>1662889551176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662889551176</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +133,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Home Page Added" />
     <MESSAGE value="Animations Added Food View" />
-    <option name="LAST_COMMIT_MESSAGE" value="Animations Added Food View" />
+    <MESSAGE value="Products Page Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Products Page Completed" />
   </component>
 </project>

@@ -11,8 +11,7 @@ public class Food {
 
     private String image;
 
-    public Food(int id, String name, String description, String size, double price, String image) {
-        this.id = id;
+    public Food(String name, String description, String size, double price, String image) {
         this.name = name;
         this.description = description;
         this.size = size;

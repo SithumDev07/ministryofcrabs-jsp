@@ -5,12 +5,12 @@ import lk.ac.kln.model.Food;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class FoodDaoImpl implements FoodDao {
 
     private static final String SELECT_ALL_USERS = "SELECT * from food";
     private static final String INSERT_CRABS = "INSERT INTO food(name, description, size, price, image) VALUES (?, ?, ?, ?, ?)";
+    private static final String DELETE_CRABS =  "DELETE FROM food WHERE id = ?";
 
     public Connection getConnection() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
@@ -46,7 +46,41 @@ public class FoodDaoImpl implements FoodDao {
 
     @Override
     public void insertFood(Food food) {
+        try {
 
+            Connection connection = getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CRABS);
+            preparedStatement.setString(1, food.getName());
+            preparedStatement.setString(2, food.getDescription());
+            preparedStatement.setString(3, food.getSize());
+            preparedStatement.setDouble(4, food.getPrice());
+            preparedStatement.setString(5, food.getImage());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public Boolean deleteFood(int id) {
+        Boolean rowDeleted = false;
+        try {
+
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(DELETE_CRABS);
+            statement.setInt(1, id);
+            rowDeleted = statement.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return rowDeleted;
     }
 
 }
